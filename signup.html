@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title> My Project</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+   </head>
+  <body >
+    <!-- <h1 ></h1>
+	<h2> </h2>
+	<h1 > </h1>
+	<p>  </p> -->
+	<!-- <?php
+	$fname = $lname = $phonenumber = $password = "";
+	
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		if (empty($_POST["fname"])) {
+			$nameErr = "First name is required";
+		} else {
+			$fname = test_input($_POST["fname"]);
+			if (!preg_match("/^[a-zA-Z-' ]*$/",$fname)) {
+				$nameErr = "Only letters and white space allowed";
+			  }
+		}
+		if (empty($_POST["lname"])) {
+			$nameErr = "Last name is required";
+		} else {
+			$lname = test_input($_POST["lname"]);
+			if (!preg_match("/^[a-zA-Z-' ]*$/",$lname)) {
+				$nameErr = "Only letters and white space allowed";
+			  }
+		}
+		if (empty($_POST["phonenumber"])) {
+			$nameErr = "Phone Number is required";
+		} else {
+			$phonenumber = test_input($_POST["phonenumber"]);
+			if (!preg_match("0123456789",$phonenumber)) {
+				$numberErr = "Only numbers allowed";
+			  }
+		}
+		if (empty($_POST["password"])) {
+			$passwordErr = "Password is required";
+		  } else {
+			$password = test_input($_POST["password"]);
+		  }
+	  }
+	  
+	  function test_input($data) {
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	  }
+	?>
+	-->
+    <!-- <script src="script.js"></script> -->
+	<!-- <form action="/action_page.php">
+		<label for="fname">First name:</label><br>
+		<input type="text" id="fname" name="fname" ><br>
+		<label for="lname">Last name:</label><br>
+		<input type="text" id="lname" name="lname" ><br>
+		<label for="pwd">Password:</label><br>
+		<input type="password" id="pwd" name="pwd"><br><br>
+		<input type="submit" value="Submit">
+		<input type="reset">
+	  </form> -->
+	  <form method="post" action= "/signup">
+		First name:<input type="text" name="fname">
+		<br><br>
+		Last name: <input type="text" name="lname">
+		<br><br>
+		Phone number: <input type="text" name="phonenumber">
+		<br><br>
+		Password: <input type="password" name="password">
+		<br><br>
+		<input type="submit" name="submit" value="Sign Up">  
+	  </form> 
+  </body>
+<img id="jun1" src="images/jungkook.png" alt="This is Jungkook from BTS" width="300"> 
+<img id="jun2" src="images/jun1.png" alt="This is Jungkook from BTS too" width="300"> 
+<img id="jun3" src="images/jun3.png" alt="This is Jungkook from BTS too" width="450"> 
+<img id="jun4" src="images/jun44.png" alt="This is Jungkook from BTS" width="250"> 
+<img id="jun5" src="images/jun55.png" alt="This is Jungkook from BTS too" width="290"> 
+<img id="jun6" src="images/jun66.png" alt="This is Jungkook from BTS too" width="380"> 
+<img id="jun8" src="images/jun88.png" alt="This is Jungkook from BTS too" width="400"> 
+<img id="jun9" src="images/jun99.png" alt="This is Jungkook from BTS" width="350"> 
+<img id="jun11" src="images/jun11.png" alt="This is Jungkook from BTS too" width="450"> 
+</html>
