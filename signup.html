@@ -7,78 +7,30 @@
     <title> My Project</title>
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
    </head>
-  <body >
-    <!-- <h1 ></h1>
-	<h2> </h2>
-	<h1 > </h1>
-	<p>  </p> -->
-	<!-- <?php
-	$fname = $lname = $phonenumber = $password = "";
-	
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		if (empty($_POST["fname"])) {
-			$nameErr = "First name is required";
-		} else {
-			$fname = test_input($_POST["fname"]);
-			if (!preg_match("/^[a-zA-Z-' ]*$/",$fname)) {
-				$nameErr = "Only letters and white space allowed";
-			  }
-		}
-		if (empty($_POST["lname"])) {
-			$nameErr = "Last name is required";
-		} else {
-			$lname = test_input($_POST["lname"]);
-			if (!preg_match("/^[a-zA-Z-' ]*$/",$lname)) {
-				$nameErr = "Only letters and white space allowed";
-			  }
-		}
-		if (empty($_POST["phonenumber"])) {
-			$nameErr = "Phone Number is required";
-		} else {
-			$phonenumber = test_input($_POST["phonenumber"]);
-			if (!preg_match("0123456789",$phonenumber)) {
-				$numberErr = "Only numbers allowed";
-			  }
-		}
-		if (empty($_POST["password"])) {
-			$passwordErr = "Password is required";
-		  } else {
-			$password = test_input($_POST["password"]);
-		  }
-	  }
-	  
-	  function test_input($data) {
-		$data = trim($data);
-		$data = stripslashes($data);
-		$data = htmlspecialchars($data);
-		return $data;
-	  }
-	?>
-	-->
-    <!-- <script src="script.js"></script> -->
-	<!-- <form action="/action_page.php">
-		<label for="fname">First name:</label><br>
-		<input type="text" id="fname" name="fname" ><br>
-		<label for="lname">Last name:</label><br>
-		<input type="text" id="lname" name="lname" ><br>
-		<label for="pwd">Password:</label><br>
-		<input type="password" id="pwd" name="pwd"><br><br>
-		<input type="submit" value="Submit">
-		<input type="reset">
-	  </form> -->
-	  <form method="post" action= "/signup">
-		First name:<input type="text" name="fname">
+  <body>
+	  <form id="frm1" method="post" action= "/action_page.php">
+		First name:<input type="text" id="fname" name="fname" required>
 		<br><br>
-		Last name: <input type="text" name="lname">
+		Last name: <input type="text" name="lname" required>
 		<br><br>
-		Email: <input type="text" name="email">
+		Email: <input type="text" name="email" required>
 		<br><br>
 		Phone number: <input type="text" name="phonenumber">
 		<br><br>
-		Password: <input type="password" name="password">
+		Password: <input type="password" name="password" required>
 		<br><br>
-		<input class="button" type="submit" name="submit" value="Sign Up">  
+		<input class="button" type="submit" onclick="loadDoc()" name="submit" value="Sign Up">  
 	  </form> 
+	  <script>
+		  function loadDoc() {
+			  const xhttp = new XMLHttpRequest();
+			  xhttp.onload = function() {
+				  document.getElementById("frm1").innerHTML = this.responseText;
+				}
+				xhttp.open("POST", "web.xml", false);
+				xhttp.send();
+			}
+	  </script>
   </body>
 <!-- <img id="jun1" src="images/jungkook.png" alt="This is Jungkook from BTS" width="300"> 
 <img id="jun2" src="images/jun1.png" alt="This is Jungkook from BTS too" width="300"> 
